@@ -38,7 +38,7 @@ public class ItemSanitySoapAlpha extends ItemSanitySoap {
     }
 
     public int getMaxItemUseDuration(ItemStack p_77626_1_) {
-        return 200;
+        return 85;
     }
 
     public EnumAction getItemUseAction(ItemStack p_77661_1_) {
