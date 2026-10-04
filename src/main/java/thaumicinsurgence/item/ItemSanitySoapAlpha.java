@@ -38,7 +38,7 @@ public class ItemSanitySoapAlpha extends ItemSanitySoap {
     }
 
     public int getMaxItemUseDuration(ItemStack p_77626_1_) {
-        return 200;
+        return 85;
     }
 
     public EnumAction getItemUseAction(ItemStack p_77661_1_) {
@@ -52,7 +52,7 @@ public class ItemSanitySoapAlpha extends ItemSanitySoap {
 
     public void onUsingTick(ItemStack stack, EntityPlayer player, int count) {
         int ticks = this.getMaxItemUseDuration(stack) - count;
-        if (ticks > 195) {
+        if (ticks > 80) {
             player.stopUsingItem();
         }
 
@@ -84,7 +84,7 @@ public class ItemSanitySoapAlpha extends ItemSanitySoap {
     @Override
     public void onPlayerStoppedUsing(ItemStack stack, World world, EntityPlayer player, int par4) {
         int qq = this.getMaxItemUseDuration(stack) - par4;
-        if (qq > 195) {
+        if (qq > 80) {
             --stack.stackSize;
             if (!world.isRemote) {
                 float chance = 0.50F;
